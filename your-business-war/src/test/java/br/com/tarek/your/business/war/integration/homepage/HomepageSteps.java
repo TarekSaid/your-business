@@ -35,7 +35,7 @@ public class HomepageSteps {
 
   @Then("^the page title should be \"([^\"]*)\"$")
   public void the_page_title_should_be(String pageTitle) {
-    WebElement element = driver.findElement(By.xpath("//html/body/h1"));
+    WebElement element = driver.findElement(By.xpath("//html/body/div/h1"));
     assertThat(element.getText()).isEqualTo(pageTitle);
   }
 }
