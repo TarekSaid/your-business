@@ -1,0 +1,43 @@
+As a Business,
+I want to have to log in the YourBusiness site,
+So that only I can change my information, form partnerships, create networks and projects.
+
+As a Business,
+I want to seek partners based on filters such as ratings, field, proximity, etc,
+In order to form partnerships that best fit my needs.
+
+As a Business,
+I want to be able to rate my partners,
+In order to let me and others know whether it's safe to make business with them.
+
+As a Business,
+I want to connect to other businesses,
+In order to form partnerships.
+
+As a Business,
+I want to place my partners in networks,
+In order to organize them better.
+
+As a Business,
+I want to create projects with my partners,
+In order to manage them better and be more productive.
+
+As a Business,
+I want to communicate with my partners and networks,
+In order to exchange valuable information.
+
+As a Business,
+I want to control permissions of the users with access to my projects, partners, networks and posts,
+In order to protect sensitive information while allowing colaborative work.
+
+As a Business,
+I want to be able to configure the privacy settings regarding my info, partners, networks and posts,
+In order to have total control on what I want to share and with whom.
+
+As a Third Party Developer,
+I want to publish my service as an app in YourBusiness' store,
+So that businesses can buy and use my service.
+
+As YourBusiness,
+I want third party developers to subscribe apps in my store,
+In order to provide more services for my users.
