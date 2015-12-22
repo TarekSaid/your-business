@@ -29,6 +29,7 @@
     <selenium.version>2.48.2</selenium.version>
     <bootstrap.version>3.3.6</bootstrap.version>
     <jquery.version>2.1.4</jquery.version>
+    <libsass.version>0.1.6-libsass_3.2.4</libsass.version>
   </properties>
 
   <!-- Test Dependencies -->
@@ -164,6 +165,28 @@
         </configuration>
       </plugin>
     </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.github.warmuuh</groupId>
+          <artifactId>libsass-maven-plugin</artifactId>
+          <version>${libsass.version}</version>
+          <executions>
+            <execution>
+              <phase>generate-resources</phase>
+              <goals>
+                <goal>compile</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <inputPath>${basedir}/src/main/webapp/resources/sass/</inputPath>
+            <outputPath>${basedir}/target/your-business/resources/css/</outputPath>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <profiles>

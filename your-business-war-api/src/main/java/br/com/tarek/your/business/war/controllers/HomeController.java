@@ -9,4 +9,6 @@ public interface HomeController {
   ModelAndView homePage();
 
   ModelAndView helpPage();
+
+  ModelAndView aboutPage();
 }

@@ -23,4 +23,10 @@ public class HomeControllerImpl implements HomeController {
   public ModelAndView helpPage() {
     return new ModelAndView("help");
   }
+
+  @Override
+  @RequestMapping(value = "/about", method = RequestMethod.GET)
+  public ModelAndView aboutPage() {
+    return new ModelAndView("about");
+  }
 }

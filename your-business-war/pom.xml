@@ -35,5 +35,12 @@
 
   <build>
     <finalName>your-business</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>com.github.warmuuh</groupId>
+        <artifactId>libsass-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>

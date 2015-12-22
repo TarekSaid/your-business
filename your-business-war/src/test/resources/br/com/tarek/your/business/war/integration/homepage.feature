@@ -9,9 +9,14 @@ Feature: Homepage
   Scenario: Browsing the home page
     When I open the home page
     Then the title should be "Home | YourBusiness"
-    And the page title should be "Home"
+    And I should see 2 links to the home page
+    And I should see 1 link to the help page
+    And I should see 1 link to the about page
 
   Scenario: Browsing the help page
     When I open the help page
     Then the title should be "Help | YourBusiness"
-    And the page title should be "Help"
+
+  Scenario: Browsing the about page
+    When I open the about page
+    Then the title should be "About | YourBusiness"

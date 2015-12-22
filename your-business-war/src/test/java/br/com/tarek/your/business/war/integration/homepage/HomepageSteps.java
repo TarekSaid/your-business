@@ -9,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.*;
 
 /**
  * Created by tarek on 19/12/15.
@@ -23,6 +25,7 @@ public class HomepageSteps {
   public void that_I_am_using_Firefox() {
     driver = new HtmlUnitDriver();
   }
+
   @When("^I open the (.*) page$")
   public void I_open_the_page(String view) {
     driver.get("http://localhost:8080/your-business/" + view);
@@ -33,9 +36,10 @@ public class HomepageSteps {
     assertThat(driver.getTitle()).isEqualTo(title);
   }
 
-  @Then("^the page title should be \"([^\"]*)\"$")
-  public void the_page_title_should_be(String pageTitle) {
-    WebElement element = driver.findElement(By.xpath("//html/body/div/h1"));
-    assertThat(element.getText()).isEqualTo(pageTitle);
+  @Then("^I should see (\\d) links? to the (.*) page$")
+  public void I_should_see_links_to_the_page(int number, String view) {
+    List<WebElement> elements = driver.findElements(By.cssSelector("a[href*='" + view + "']"));
+
+    assertThat(elements).hasSize(number);
   }
 }
