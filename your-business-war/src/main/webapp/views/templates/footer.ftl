@@ -1,7 +1,7 @@
 <footer class="footer">
   <small>
-    <a href="http://www.railstutorial.org/">YourBusines</a>
-    by <a href="http://www.michaelhartl.com/">Tarek Said</a>
+    <a href="http://localhost:8080/your-business/">YourBusiness</a>
+    by Tarek Said
   </small>
   <nav>
     <ul>

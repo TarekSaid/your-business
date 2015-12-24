@@ -5,8 +5,8 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Created by tarek on 24/12/15.
  */
-public interface UserController {
-  ModelAndView users();
+public interface BusinessController {
+  ModelAndView businesses();
 
-  ModelAndView newUser();
+  ModelAndView newBusiness();
 }
