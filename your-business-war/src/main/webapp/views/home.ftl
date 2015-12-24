@@ -10,6 +10,6 @@
     projects and networks.
   </h2>
 
-  <a href="#" class="btn btn-lg btn-primary">Sign up now!</a>
+  <a href="signup" class="btn btn-lg btn-primary">Sign up now!</a>
 </div>
 </@p.page>

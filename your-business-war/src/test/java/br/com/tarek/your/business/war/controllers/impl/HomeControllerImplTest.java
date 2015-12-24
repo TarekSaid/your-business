@@ -15,10 +15,17 @@ public class HomeControllerImplTest {
   private HomeControllerImpl homeController;
 
   public void homePageShouldReturnHomeView() {
+    assertThat(homeController.homePage()).isNotNull();
     assertThat(homeController.homePage().getViewName()).isEqualTo("home");
   }
 
   public void helpPageShouldReturnHelpView() {
+    assertThat(homeController.helpPage()).isNotNull();
     assertThat(homeController.helpPage().getViewName()).isEqualTo("help");
+  }
+
+  public void aboutPageShouldReturnAboutView() {
+    assertThat(homeController.aboutPage()).isNotNull();
+    assertThat(homeController.aboutPage().getViewName()).isEqualTo("about");
   }
 }
