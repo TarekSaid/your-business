@@ -22,7 +22,13 @@
 
     <dependency>
       <groupId>br.com.tarek</groupId>
-      <artifactId>your-business-war-api</artifactId>
+      <artifactId>your-business-web-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>br.com.tarek</groupId>
+      <artifactId>your-business-persistence-api</artifactId>
       <version>${project.version}</version>
     </dependency>
 

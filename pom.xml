@@ -10,7 +10,8 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>your-business-war-api</module>
+    <module>your-business-web-api</module>
+    <module>your-business-persistence-api</module>
     <module>your-business-war</module>
   </modules>
 
@@ -30,6 +31,11 @@
     <bootstrap.version>3.3.6</bootstrap.version>
     <jquery.version>2.1.4</jquery.version>
     <libsass.version>0.1.6-libsass_3.2.4</libsass.version>
+    <javax.inject.version>1</javax.inject.version>
+    <neo4j.version>2.3.1</neo4j.version>
+    <javax.validation.version>1.1.0.Final</javax.validation.version>
+    <javax.transaction.version>1.1</javax.transaction.version>
+    <spring.data.version>4.0.0.RELEASE</spring.data.version>
   </properties>
 
   <!-- Test Dependencies -->
@@ -83,7 +89,34 @@
         <scope>test</scope>
       </dependency>
 
+      <!-- Database Configuration w/ Neo4j -->
+      <dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-neo4j</artifactId>
+        <version>${spring.data.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.neo4j</groupId>
+        <artifactId>neo4j-kernel</artifactId>
+        <version>${neo4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>${javax.validation.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.transaction</groupId>
+        <artifactId>jta</artifactId>
+        <version>${javax.transaction.version}</version>
+      </dependency>
+
       <!-- Spring Dependencies -->
+      <dependency>
+        <groupId>javax.inject</groupId>
+        <artifactId>javax.inject</artifactId>
+        <version>${javax.inject.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context-support</artifactId>

@@ -10,9 +10,14 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>your-business-war-api</artifactId>
+  <artifactId>your-business-web-api</artifactId>
 
   <dependencies>
+    <!-- Spring Web Dependencies -->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>
@@ -33,6 +38,7 @@
       <groupId>org.freemarker</groupId>
       <artifactId>freemarker</artifactId>
     </dependency>
+
     <!-- Bootstrap & JQuery -->
     <dependency>
       <groupId>org.webjars</groupId>
