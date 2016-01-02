@@ -28,7 +28,7 @@ public class LayoutStepDefs {
 
   @When("^I open the (.*) page$")
   public void I_open_the_page(String view) {
-    driver.get("http://localhost:8080/your-business/" + view);
+    driver.get("http://localhost:9010/your-business/" + view);
   }
 
   @Then("^the title should be \"([^\"]*)\"$")
