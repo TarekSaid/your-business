@@ -10,4 +10,6 @@ public interface BusinessService {
   Business create(Business business);
 
   Iterable<Business> list();
+
+  Business findBusiness(long l);
 }

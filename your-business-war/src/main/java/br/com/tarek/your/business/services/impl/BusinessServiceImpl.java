@@ -25,4 +25,9 @@ public class BusinessServiceImpl implements BusinessService {
   public Iterable<Business> list() {
     return businessRepository.findAll();
   }
+
+  @Override
+  public Business findBusiness(long id) {
+    return businessRepository.findOne(id);
+  }
 }

@@ -30,7 +30,7 @@ public class BusinessServiceImplTest {
       businessRepository.save(business); result = business;
     }};
 
-    Assertions.assertThat(businessService.create(business)).isEqualTo(business);
+    assertThat(businessService.create(business)).isEqualTo(business);
   }
 
   public void listShouldCallFindAllFromRepository(@Mocked final List<Business> businesses) {
@@ -38,6 +38,14 @@ public class BusinessServiceImplTest {
       businessRepository.findAll(); result = businesses;
     }};
 
-    Assertions.assertThat(businessService.list()).isEqualTo(businesses);
+    assertThat(businessService.list()).isEqualTo(businesses);
+  }
+
+  public void findBusinessShouldCallFindOneFromRepository(@Mocked final Business business) {
+    new Expectations() {{
+      businessRepository.findOne(1L); result = business;
+    }};
+
+    assertThat(businessService.findBusiness(1L)).isEqualTo(business);
   }
 }

@@ -8,5 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 public interface BusinessController {
   ModelAndView businesses();
 
+  ModelAndView show(Long id);
+
   ModelAndView newBusiness();
 }
