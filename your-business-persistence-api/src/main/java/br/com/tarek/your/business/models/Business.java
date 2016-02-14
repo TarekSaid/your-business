@@ -1,11 +1,12 @@
 package br.com.tarek.your.business.models;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.NotBlank;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.Index;
 import org.neo4j.ogm.annotation.NodeEntity;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.Objects;
 
 /**
@@ -17,16 +18,27 @@ public class Business {
   @GraphId
   private Long id;
 
-  @NotNull
+  @NotBlank
+  @Size(max = 50)
   private String name;
 
   private String tradeName;
 
   @Index(unique = true)
-  @NotNull
+  @NotBlank
+  @Size(max = 255)
+  @Pattern(regexp = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$",
+      flags = Pattern.Flag.CASE_INSENSITIVE)
   private String email;
 
-  public Business() {}
+  @NotBlank
+  @Size(max = 60)
+  private String password;
+
+  private String role;
+
+  public Business() {
+  }
 
   public Business(String name, String email) {
     this.name = name;
@@ -63,6 +75,22 @@ public class Business {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public String getRole() {
+    return role;
+  }
+
+  public void setRole(String role) {
+    this.role = role;
   }
 
   @Override
